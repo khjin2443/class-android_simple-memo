@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">SimpleMemo</string>
+    <string name="memo1">메모1</string>
+    <string name="memo2">메모2</string>
+    <string name="memo3">메모3</string>
+    <string name="newMemo">새로쓰기</string>
+    <string name="saveMemo">[메모 1] 저장</string>
+</resources>
