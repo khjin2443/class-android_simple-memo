@@ -13,6 +13,12 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hasoo.simplememo.DatabaseHelper;
+import com.example.hasoo.simplememo.MainActivity;
+import com.example.hasoo.simplememo.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Edit_Notepad extends AppCompatActivity {
     DatabaseHelper dbHelper;
@@ -23,8 +29,11 @@ public class Edit_Notepad extends AppCompatActivity {
     EditText editText_title;
     EditText editText_content;
 
+    TextView textView_time;
+
     String title;
     String content;
+    String time;
     int position;
 
     @Override
@@ -70,6 +79,7 @@ public class Edit_Notepad extends AppCompatActivity {
 //                    메인 액티비티 호출
                     return;
                 }
+
 
 //                불러온 값과 수정한 값이 같을경우 취소하고 메인액티비티 호출
                 if (title.equals(edit_title) && content.equals(edit_content)) {

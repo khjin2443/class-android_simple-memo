@@ -79,7 +79,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
                     int position = getAdapterPosition();
                     if(position != RecyclerView.NO_POSITION) {
                         Log.d("tag", position + "클릭");
-                        Cursor cursor = database.rawQuery("select _id, title, content from noteData order by time DESC", null);
+                        Cursor cursor = database.rawQuery("select _id, title, content from noteData", null);
                         cursor.move(position+1);
                         Intent intent = new Intent(v.getContext(), Edit_Notepad.class);
                         intent.putExtra("title",cursor.getString(1));
