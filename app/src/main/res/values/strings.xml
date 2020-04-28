@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">SimpleMemo</string>
-    <string name="memo1">메모1</string>
-    <string name="memo2">메모2</string>
-    <string name="memo3">메모3</string>
     <string name="newMemo">새로쓰기</string>
-    <string name="saveMemo">[메모 1] 저장</string>
+    <string name="saveMemo">[메모] 저장</string>
+    <string name="new_memo">새 메모</string>
+    <string name="new_notepad">Add Notepad</string>
+    <string name="open_notepad">Open</string>
+    <string name="save_notepad">Save</string>
+    <string name="delete_notepad">Delete</string>
+    <string name="hint_notepad_title">Title</string>
+    <string name="hint_notepad_content">Content</string>
+    <string name="Toast_save">[ Saved ]</string>
+    <string name="Toast_edit">[ Edited ]</string>
+    <string name="Toast_delete">[ Delete ]</string>
+    <string name="Toast_not_save">[ No input, not saved ]</string>
+    <string name="Toast_password_cancel">[ Password change has been canceled. ]</string>
+    <string name="notepad_last_edit_time">last edit time : </string>
 </resources>

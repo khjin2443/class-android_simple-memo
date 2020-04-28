@@ -1,103 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TableLayout
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:stretchColumns="*">
+        android:layout_weight="10"
+        android:background="#fddddc"
+        android:orientation="horizontal">
 
-        <TableRow
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textColor="#C8C8C8"
+            android:textSize="28sp" />
+
+        <Button
+            android:id="@+id/btn_new"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:layout_margin="16dp"
+            android:text="@string/new_memo"
+            android:backgroundTint="#ffff"
+            android:clickable="true" />
 
-            <Button
-                android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:onClick="onMemoClick"
-                android:text="@string/memo1"
-                android:textSize="18sp" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:onClick="onMemoClick"
-                android:text="@string/memo2"
-                android:textSize="18sp" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#ffff">
 
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="2"
-                android:onClick="onMemoClick"
-                android:text="@string/memo3"
-                android:textSize="18sp" />
-        </TableRow>
-
-        <TableRow
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="#C8C8C8">
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="6"
-                android:background="#fefed8"
-                android:ems="10"
-                android:gravity="left"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:textSize="18sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1">
-
-            <EditText
-                android:id="@+id/editText2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_span="6"
-                android:background="#fddddc"
-                android:ems="10"
-                android:gravity="top|left"
-                android:inputType="textPersonName"
-                android:padding="5dp"
-                android:singleLine="false"
-                android:textSize="18sp" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent" >
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:text="@string/newMemo"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button5"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_span="3"
-                android:text="@string/saveMemo"
-                android:textSize="18sp" />
-        </TableRow>
-    </TableLayout>
-</android.support.constraint.ConstraintLayout>
+        </androidx.recyclerview.widget.RecyclerView>
+    </FrameLayout>
+</LinearLayout>
