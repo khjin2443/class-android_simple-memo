@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffff"
+    android:orientation="horizontal"
+    tools:context=".NoteAdapter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/adapter_tit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:text="제목"
+            android:textColor="#000000"
+            android:textSize="25sp"/>
+        <TextView
+            android:id="@+id/adapter_con"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:text="내용"
+            android:textColor="#AAAA"
+            android:textSize="20sp"/>
+    </LinearLayout>
+</LinearLayout>

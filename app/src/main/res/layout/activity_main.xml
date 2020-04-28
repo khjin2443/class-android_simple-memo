@@ -29,7 +29,7 @@
             android:id="@+id/btn_new"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="16dp"
+            android:layout_margin="6dp"
             android:text="@string/new_memo"
             android:backgroundTint="#ffff"
             android:clickable="true" />
@@ -45,10 +45,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="#C8C8C8">
+            android:layout_height="wrap_content">
 
         </androidx.recyclerview.widget.RecyclerView>
     </FrameLayout>
