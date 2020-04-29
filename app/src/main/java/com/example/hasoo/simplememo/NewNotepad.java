@@ -31,7 +31,7 @@ public class NewNotepad extends AppCompatActivity {
         editText_title = findViewById(R.id.new_editText);
         editText_content = findViewById(R.id.new_editText2);
 
-        Button button4 = (Button)findViewById(R.id.button4);
+        Button button4 = findViewById(R.id.button4);
 
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,9 +52,8 @@ public class NewNotepad extends AppCompatActivity {
             public void onClick(View v) {
                 NoteAdapter adapter = new NoteAdapter();
                 adapter.addItem(new NoteList(editText_title.getText().toString(), editText_content.getText().toString()));
-//                어댑터에 아이템을 추가함.
+//                어댑터에 아이템을 추가.
 
-//                 제목과 내용을 가져옴
                 String input_title = editText_title.getText().toString();
                 String input_content = editText_content.getText().toString();
 
@@ -91,6 +90,5 @@ public class NewNotepad extends AppCompatActivity {
         Intent intent = new Intent(NewNotepad.this, MainActivity.class);
         startActivity(intent);
 //        뒤로가기 버튼 터치시 닫고 메인액티비티를 새로 띄움
-//        스택때문..
     }
 }

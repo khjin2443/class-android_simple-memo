@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         createTable(tableName); // 테이블 생성 함수
         executeQuery();
 
-//        플로팅버튼 터치시 메모작성 클래스 호출
+//       버튼 터치시 메모작성 클래스 호출
         Button newbutton = findViewById(R.id.btn_new);
         newbutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,8 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void executeQuery() {
         Cursor cursor = database.rawQuery("select _id, title, content from noteData", null);
-//        select 컬럼 from 테이블 order by 컬럼 내림차순
-//        noteData 테이블에서 _id, title, content 컬럼을 time 컬럼을 기준으로 내림차순으로
+//        내림차순
         int recordCount = cursor.getCount();
 
         NoteAdapter adapter = new NoteAdapter();
